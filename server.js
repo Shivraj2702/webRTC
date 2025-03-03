@@ -14,7 +14,7 @@ const socketToUser = {};
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.sendFile(join(__dirname + "/app/index.html"));
